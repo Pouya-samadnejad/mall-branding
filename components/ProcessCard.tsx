@@ -19,7 +19,7 @@ export default function ProcessCard({
 }: ProcessCardProps) {
   return (
     <div
-      className={`mx-auto flex w-full max-w-xs flex-col items-start sm:max-w-none lg:mx-0 lg:w-68 lg:shrink-0 lg:h-72 ${className}`}
+      className={`mx-auto flex w-full max-w-xs flex-col items-start sm:max-w-none lg:mx-0 lg:w-fit lg:shrink-0 lg:h-72 ${className}`}
     >
       <div className="flex w-full items-center">
         <div className="relative flex size-16 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10 shadow-[0_0_20px_hsl(var(--primary)/0.35)] sm:size-20">

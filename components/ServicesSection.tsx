@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 import { services } from "@/const/services";
 import ServicesCard from "./ServicesCard";
-
+interface ServicesSectionProps {
+  description?: string;
+}
 const containerVariants = {
   hidden: {},
   visible: {
@@ -24,7 +26,7 @@ const itemVariants = {
   },
 };
 
-export default function ServicesSection() {
+export default function ServicesSection({ description }: ServicesSectionProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 60 }}
@@ -56,7 +58,9 @@ export default function ServicesSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-stone-300"
           >
-            راهکارهای یک پارچه برای دیده شدن برند شما در مراکز خرید
+            {description
+              ? description
+              : "            راهکارهای یک پارچه برای دیده شدن برند شما در مراکز خرید"}
           </motion.p>
 
           <motion.div

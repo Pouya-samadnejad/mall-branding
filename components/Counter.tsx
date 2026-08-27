@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 interface CounterProps {
   value: number;
-  title: string;
+  title?: string;
   suffix?: string;
   duration?: number;
   className?: string;
@@ -46,11 +46,14 @@ export function Counter({
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className={cn("flex flex-col items-center px-2 text-center md:px-7", className)}
+      className={cn(
+        "flex flex-col items-center px-2 text-center md:px-7",
+        className,
+      )}
     >
       <div
         className={cn(
-          "text-3xl font-black tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl",
+          "font-black tracking-tight text-white", // no text-* at all
           numberClassName,
         )}
       >

@@ -56,7 +56,6 @@ export default function HeroSection({
           )}
         </motion.h1>
 
-        {/* Description */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -66,7 +65,6 @@ export default function HeroSection({
           <p>{description}</p>
         </motion.div>
 
-        {/* Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

@@ -33,7 +33,7 @@ export default function ProcessCard({
       <div className="pt-4 sm:pt-5">
         <p className="font-bold text-primary">{step}</p>
         <p className="font-bold text-primary">{title}</p>
-        <p className="w-full text-sm sm:w-40">{description}</p>
+        <p className="w-60 text-sm sm:w-40">{description}</p>
       </div>
     </div>
   );

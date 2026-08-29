@@ -37,11 +37,9 @@ export default function HeroSection({
         />
       </motion.div>
 
-      {/* Overlay — stronger on mobile for text readability */}
       <div className="absolute inset-0 -z-10 bg-linear-to-l from-stone-950 from-40% via-stone-950/70 to-stone-950/30 lg:via-stone-950/50 lg:to-transparent" />
 
       <div className="flex w-full flex-col gap-5 px-4 py-20 sm:px-8 sm:py-28 lg:w-1/2 lg:py-40 lg:pr-10 xl:pr-16">
-        {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,7 +57,6 @@ export default function HeroSection({
           )}
         </motion.h1>
 
-        {/* Description */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -69,7 +66,6 @@ export default function HeroSection({
           <p>{description}</p>
         </motion.div>
 
-        {/* Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

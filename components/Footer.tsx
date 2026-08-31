@@ -1,42 +1,12 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import {
-  FaInstagram,
-  FaTelegramPlane,
-  FaWhatsapp,
-  FaLinkedinIn,
-} from "react-icons/fa";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { menuItems } from "@/const/menu";
 import { services } from "@/const/services";
 import { Phone, Mail, MapPin } from "lucide-react";
+import SocialSection from "./SocialSection";
 
 export default function Footer() {
-  const socialLinks = [
-    {
-      title: "Instagram",
-      icon: <FaInstagram size={18} />,
-      href: "#",
-    },
-    {
-      title: "Telegram",
-      icon: <FaTelegramPlane size={18} />,
-      href: "#",
-    },
-    {
-      title: "WhatsApp",
-      icon: <FaWhatsapp size={18} />,
-      href: "#",
-    },
-    {
-      title: "LinkedIn",
-      icon: <FaLinkedinIn size={18} />,
-      href: "#",
-    },
-  ];
-
   return (
     <footer className="border-t">
       <div className="grid w-full grid-cols-1 gap-10 px-6 py-10 md:grid-cols-2 md:gap-8 md:px-10 lg:grid-cols-3 lg:gap-0 lg:divide-x">
@@ -54,24 +24,11 @@ export default function Footer() {
 
           <p className="text-sm">دیده شوند، در ذهن بمانند و انتخاب شوند</p>
 
-          <div className="flex gap-3 mt-4">
-            {socialLinks.map((link) => (
-              <Link key={link.title} href={link.href} aria-label={link.title}>
-                <HoverBorderGradient
-                  containerClassName="rounded-full"
-                  as="div"
-                  className="bg-black text-white p-3 flex items-center justify-center"
-                >
-                  {link.icon}
-                </HoverBorderGradient>
-              </Link>
-            ))}
-          </div>
+          <SocialSection />
         </div>
 
         <div className="px-0 lg:px-6">
           <div className="grid grid-cols-2 gap-6 sm:gap-10">
-            {/* دسترسی سریع */}
             <div className="space-y-2">
               <h4 className="text-xl">دسترسی سریع</h4>
 
@@ -110,7 +67,6 @@ export default function Footer() {
           <h4 className="mb-4 text-xl">تماس با ما</h4>
 
           <ul className="space-y-3 text-sm text-gray-300">
-            {/* تلفن */}
             <li className="flex items-center gap-2">
               <Phone size={18} className="text-primary shrink-0" />
 

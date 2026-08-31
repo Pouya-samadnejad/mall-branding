@@ -10,6 +10,7 @@ interface HeroSectionProps {
   title: string;
   highlightTitle?: string;
   description: string;
+  noButton?: boolean;
 }
 
 export default function HeroSection({
@@ -17,10 +18,10 @@ export default function HeroSection({
   title,
   highlightTitle,
   description,
+  noButton,
 }: HeroSectionProps) {
   return (
     <div className="relative flex min-h-[80svh] w-full items-center overflow-hidden lg:min-h-[90svh]">
-      {/* Background image — slow zoom-out effect */}
       <motion.div
         className="absolute inset-0 -z-10"
         initial={{ scale: 1.1 }}
@@ -66,29 +67,31 @@ export default function HeroSection({
           <p>{description}</p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
-          className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-3"
-        >
-          <HoverBorderGradient
-            containerClassName="rounded-full w-full sm:w-auto sm:min-w-40"
-            as="button"
-            className="flex w-full items-center justify-center space-x-2 bg-black text-white"
+        {!noButton && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
+            className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-3"
           >
-            <Link href="/contact-us" className="w-full py-1">
-              دریافت مشاوره
-            </Link>
-          </HoverBorderGradient>
+            <HoverBorderGradient
+              containerClassName="rounded-full w-full sm:w-auto sm:min-w-40"
+              as="button"
+              className="flex w-full items-center justify-center space-x-2 bg-black text-white"
+            >
+              <Link href="/contact-us" className="w-full py-1">
+                دریافت مشاوره
+              </Link>
+            </HoverBorderGradient>
 
-          <Link
-            href="/portfolio"
-            className="w-full rounded-full border border-primary bg-transparent px-4 py-2.5 text-center text-primary transition-all hover:bg-primary hover:text-black sm:w-auto sm:min-w-40"
-          >
-            مشاهده پروژه ها
-          </Link>
-        </motion.div>
+            <Link
+              href="/portfolio"
+              className="w-full rounded-full border border-primary bg-transparent px-4 py-2.5 text-center text-primary transition-all hover:bg-primary hover:text-black sm:w-auto sm:min-w-40"
+            >
+              مشاهده پروژه ها
+            </Link>
+          </motion.div>
+        )}
       </div>
     </div>
   );

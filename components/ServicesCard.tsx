@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { LucideIcon } from "lucide-react";
-
-import { GlowingEffect } from "./ui/glowing-effect";
+import GlowBox from "./GlowBox";
 
 interface ServicesCardProps {
   title: string;
@@ -23,15 +22,10 @@ export default function ServicesCard({
 }: ServicesCardProps) {
   return (
     <Link href={href} className="block h-full group">
-      <div className="relative mx-auto h-72 w-full max-w-sm rounded-3xl sm:h-80 md:h-96 md:max-w-none md:w-72">
-        <GlowingEffect
-          spread={40}
-          glow
-          disabled={false}
-          proximity={64}
-          inactiveZone={0.01}
-        />
-
+      <GlowBox
+        fillContent
+        className="relative mx-auto h-72 w-full max-w-sm rounded-3xl sm:h-80 md:h-96 md:max-w-none md:w-72"
+      >
         <div className="absolute inset-0 overflow-hidden rounded-3xl border border-stone-800 bg-black p-3 flex flex-col justify-end">
           <Image
             src={image}
@@ -58,7 +52,7 @@ export default function ServicesCard({
             </div>
           </div>
         </div>
-      </div>
+      </GlowBox>
     </Link>
   );
 }

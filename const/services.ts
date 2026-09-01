@@ -9,7 +9,7 @@ import {
 export const services = [
   {
     name: "تبلیغات محیطی",
-    link: "/services",
+    link: "/services/outdoor-advertising",
     image: "/tabliqatMohiti.webp",
     icon: Megaphone,
     description:
@@ -17,7 +17,7 @@ export const services = [
   },
   {
     name: "ویدیو وال",
-    link: "/portfolio",
+    link: "/services/video-wall",
     image: "/videoWall.webp",
     icon: MonitorPlay,
     description:
@@ -25,7 +25,7 @@ export const services = [
   },
   {
     name: "پروموشن و سمپلینگ",
-    link: "/about-us",
+    link: "/services/promotion",
     image: "/sampling.webp",
     icon: Handshake,
     description:
@@ -33,7 +33,7 @@ export const services = [
   },
   {
     name: "ساخت تیزر",
-    link: "/contact-us",
+    link: "/services/teaser",
     image: "/teaser.webp",
     icon: Clapperboard,
     description:
@@ -41,7 +41,7 @@ export const services = [
   },
   {
     name: "ساخت کانتر",
-    link: "#",
+    link: "/services/counter",
     image: "/counter.webp",
     icon: Container,
     description:

@@ -6,7 +6,6 @@ interface GlowBoxProps {
   className?: string;
   spread?: number;
   proximity?: number;
-  /** وقتی محتوا fill/absolute هست (مثل کارت تصویردار) true بذار */
   fillContent?: boolean;
 }
 

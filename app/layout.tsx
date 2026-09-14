@@ -22,10 +22,10 @@ const iranyekan = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mall Branding",
-    template: "%s | Mall Branding",
+    default: "برندینگ مال",
+    template: "%s | برندینگ مال",
   },
-  description: "Modern mall branding and advertising website.",
+  description: "خدمات تبلیغات و برندینگ در مراکز خرید",
 };
 
 export default function RootLayout({

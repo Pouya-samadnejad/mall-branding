@@ -3,7 +3,10 @@ import HeroSection from "@/components/HeroSection";
 import ProccessSection from "@/components/ProccessSection";
 import ServicesSection from "@/components/ServicesSection";
 import heroImage from "@/public/mall-branding-heroPic.webp";
-
+import { Metadata } from "next/dist/types";
+export const metadata: Metadata = {
+  description: "خدمات ما",
+};
 export default function ServicesPage() {
   return (
     <div>

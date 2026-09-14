@@ -8,7 +8,11 @@ import SocialSection from "@/components/SocialSection";
 import TestemonialSection from "@/components/TestemonialSection";
 import { contactData, HERO } from "@/const/contact-us";
 import heroImage from "@/public/contact-hero.webp";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "تماس با ما",
+};
 export default function ContactUsPage() {
   return (
     <main>

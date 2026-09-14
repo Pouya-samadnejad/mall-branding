@@ -7,7 +7,10 @@ import { Counter } from "@/components/Counter";
 import { ABOUT, HERO, STATS, VALUES, VALUES_LIST } from "@/const/about-us";
 import TestemonialSection from "@/components/TestemonialSection";
 import { GlowBlur } from "@/components/GlowBlur";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "درباره ما",
+};
 export default function AboutUsPage() {
   return (
     <main className="space-y-10 md:space-y-16">

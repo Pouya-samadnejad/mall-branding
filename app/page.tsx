@@ -5,7 +5,7 @@ import PortfolioSection from "@/components/PortfolioSection";
 import ProccessSection from "@/components/ProccessSection";
 import ServicesSection from "@/components/ServicesSection";
 import TestemonialSection from "@/components/TestemonialSection";
-import heroImage from "@/public/mall-branding-heroPic.webp";
+import heroImage from "@/public/home-section.webp";
 export default function page() {
   return (
     <>

@@ -29,6 +29,8 @@ export default function InfoBox({
             src={image}
             alt={imageAlt}
             fill
+            placeholder="blur"
+            blurDataURL={image}
             className="object-cover "
             priority={false}
           />

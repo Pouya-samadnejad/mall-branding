@@ -27,6 +27,8 @@ export default function AboutUsPage() {
               src="/tabliqat-mohiti.webp"
               alt="تبلیغات محیطی در مرکز خرید"
               fill
+              placeholder="blur"
+              blurDataURL="/tabliqat-mohiti.webp"
               className="object-cover"
               priority={false}
             />

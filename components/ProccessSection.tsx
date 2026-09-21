@@ -5,7 +5,6 @@ import { FadeIn } from "./FadeIn";
 export default function ProccessSection() {
   return (
     <div className="flex flex-col items-center justify-center px-4 pb-10 md:px-8">
-      {/* Header */}
       <FadeIn className="flex flex-col items-center justify-center px-2 text-center sm:px-10">
         <h2 className="text-primary">فرایند همکاری با ما</h2>
         <p>از تحلیل تا اجرا در کنار شما هستیم</p>

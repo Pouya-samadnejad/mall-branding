@@ -32,6 +32,7 @@ export default function HeroSection({
           src={image}
           alt={title}
           fill
+          placeholder="blur"
           priority
           className="object-cover object-center"
           sizes="100vw"

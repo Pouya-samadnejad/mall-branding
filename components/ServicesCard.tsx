@@ -10,6 +10,7 @@ interface ServicesCardProps {
   href: string;
   icon?: LucideIcon;
   iconClassName?: string;
+  blurDataURL?: string;
 }
 
 export default function ServicesCard({
@@ -19,6 +20,7 @@ export default function ServicesCard({
   href,
   icon: Icon,
   iconClassName,
+  blurDataURL,
 }: ServicesCardProps) {
   return (
     <Link href={href} className="block h-full group">
@@ -30,6 +32,8 @@ export default function ServicesCard({
           <Image
             src={image}
             fill
+            placeholder="blur"
+            blurDataURL={blurDataURL}
             alt={title}
             className="object-cover transition-transform duration-500 group-hover:scale-110"
           />

@@ -45,6 +45,7 @@ export default function ServicesSection({ description }: ServicesSectionProps) {
                   href={s.link}
                   description={s.description}
                   icon={s.icon}
+                  blurDataURL={s.image}
                 />
               </FadeIn>
             ))}

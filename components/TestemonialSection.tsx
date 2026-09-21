@@ -9,6 +9,7 @@ export default function TestemonialSection() {
         src={CoverImage}
         alt="hero-section"
         fill
+        placeholder="blur"
         priority
         className="-z-10 object-cover grayscale"
         sizes="100vw"
